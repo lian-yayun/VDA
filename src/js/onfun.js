@@ -491,7 +491,7 @@ var linesname = [];
                 },
                 ambient: {
                     color: '#fff', //光照颜色
-                    intensity: 2,
+                    intensity: 0.7,
                 },
             },
             // postEffect: {
