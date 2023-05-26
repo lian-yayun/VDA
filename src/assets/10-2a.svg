@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1255.66 38.44"><defs><style>@keyframes dash {
+  0% {
+    stroke-dashoffset: 1200;
+  }
+
+  100% {
+    stroke-dashoffset: 120;
+  }
+} 
+.cls-1{fill:none;stroke:rgba(43,125,205,0.5);stroke-miterlimit:10;stroke-dasharray: 300 1000;animation: dash 6s linear infinite;}</style></defs><g id="图层_2" data-name="图层 2"><g id="图层_1-2" data-name="图层 1" stroke-width="2"><path class="cls-1" d="M0,37.94l649.78-.42s37.11-1.67,51.7-15,32.46-22,51.5-22L1255.66.5"/></g></g></svg>
