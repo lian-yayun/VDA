@@ -237,17 +237,16 @@ export default {
       }
 
       #china {
-        width: 45%;
-        height: 45%;
+        width: 5.6125rem;
+        height: 4.7375rem;
         position: absolute;
-        bottom: 0;
+        bottom: 0.35rem;
         right: 0;
-        transform: translate(25%, -5%);
+        transform: translateX(28%);
       }
-
       #world {
         width: 100%;
-        height: 528px;
+        height: 8.2rem;
         position: relative;
 
         &::before {
