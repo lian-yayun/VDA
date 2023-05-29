@@ -122,7 +122,7 @@ var linesname = [];
     });
 })();
 (function () {
-    var chartDom = document.getElementById('item-2');
+    var chartDom = document.getElementById('item2-body');
     var myChart = echarts.init(chartDom);
     var option;
     option = {
@@ -187,7 +187,7 @@ var linesname = [];
     });
 })();
 (function () {
-    var chartDom = document.getElementById('item-3');
+    var chartDom = document.getElementById('item3-body');
     var myChart = echarts.init(chartDom);
     var option;
     option = {
@@ -430,52 +430,60 @@ var linesname = [];
     mapdata.map(v => {
         return v.value[2] = (100 * Math.random()).toFixed()
     })
-    console.log(mapdata, 11);
     option = {
         geo3D: {
             map: "china",
             regions: [{
                 name: '西藏',
                 itemStyle: {
-                    color: 'rgb(70,84,202)',
+                    color: '#BA99C0',
                     opacity: 1,
                     // borderWidth: 3,
                     // borderColor: '#1BF8C3'
                 },
                 label: {
                     show: true,
-                    textStyle: {
-                        color: '#fff',
-                        // fontWeight: 500,
-                        // borderWidth: 0.5,
-                        // borderColor: '#000',
-                        // fontSize: 32
-                    }
+                    color: "#FFFFFF",
                 },
-                // emphasis: {
-                //     label: {
-                //         show: true,
-                //         textStyle: {
-                //             color: '#fff',
-                //             fontWeight: 500,
-                //         }
-                //     }
-                // }
-            }],//默认高亮区域
-            // boxWidth: 100,
-            // boxHeight: 100,
+                emphasis: {
+                    itemStyle: {
+                        color: '#BA99C0'
+                    },
+                    label: {
+                        show: true,
+                        textStyle: {
+                            color: '#db656b',
+                        }
+                    },
+                },
+
+            }],
             roam: true,
             boxDepth: 'auto',
             itemStyle: {
-                color: "rgba(25,37,47,255)",
-                borderColor: 'rgb(105,135,160)',
+                // color: "rgba(25,37,47,255)",
+                // borderColor: 'rgb(105,135,160)',
+                color: "#9871A0",
+                borderColor: '#595383',
                 borderWidth: 0.5,
                 opacity: 0.8
             },
+            // label: {
+            //     show: true,
+            //     fontSize: 16,
+            //     color: '#fff',
+            //     // formatter: function (params) {
+            //     //   // console.log(params)
+            //     //   return params.name
+            //     // }
+            // },
             emphasis: {
                 label: {
                     show: true,
-                    color: "rgba(57,85,109,255)",
+                    color: "#FFFFFF",
+                },
+                itemStyle: {
+                    color: '#BA99C0'
                 },
             },
             shading: 'realistic',
@@ -494,6 +502,12 @@ var linesname = [];
                     intensity: 0.7,
                 },
             },
+            // regionHeight: 5,
+            // groundPlane: {
+            //     show: true,
+            //     color: 'rgb(42,52,52)'
+            // },
+
             // postEffect: {
             //     enable: true,
             //     bloom: {
@@ -511,19 +525,19 @@ var linesname = [];
                 barSize: 1, // 柱子粗细
                 shading: 'lambert',
                 itemStyle: {
-                    color: 'rgb(70,84,202)'
+                    color: '#FD8A99'
                 },
-                label: {
-                    show: true,
-                    position: 'top',
-                    textStyle: {
-                        color: '#fff',
-                        backgroundColor: 'transparent'
-                    },
-                    formatter(params) {
-                        return params.value[2]
-                    }
-                },
+                // label: {
+                //     show: true,
+                //     position: 'top',
+                //     textStyle: {
+                //         color: '#fff',
+                //         backgroundColor: 'transparent'
+                //     },
+                //     formatter(params) {
+                //         return params.value[2]
+                //     }
+                // },
                 data: mapdata,
             }
 

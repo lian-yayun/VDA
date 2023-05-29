@@ -12,7 +12,7 @@
   text-align: center;
   color: #2c3e50;
   width: 100%;
-  background-image: url("./assets/4a.png");
+  background-image: url("./assets/4a_副本.jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }

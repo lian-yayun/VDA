@@ -40,8 +40,14 @@
         <div id="china"></div>
       </div>
       <div class="body-2">
-        <div id="item-2"></div>
-        <div id="item-3"></div>
+        <div class="item-2">
+          <div id="item2-body"></div>
+          <div class="panel-footer"></div>
+        </div>
+        <div class="item-3">
+          <div id="item3-body"></div>
+          <div class="panel-footer"></div>
+        </div>
       </div>
     </div>
     <div class="main-2"></div>
@@ -237,12 +243,12 @@ export default {
       }
 
       #china {
-        width: 5.6125rem;
-        height: 4.7375rem;
+        width: 4rem;
+        height: 3.5rem;
         position: absolute;
         bottom: 0.35rem;
-        right: 0;
-        transform: translateX(28%);
+        left: 0;
+        transform: translateX(0%);
       }
       #world {
         width: 100%;
@@ -281,32 +287,138 @@ export default {
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
-
-      #item-2 {
+      .item-2 {
         width: 100%;
         height: 3.7rem;
+        position: relative;
+        #item2-body {
+          width: 100%;
+          height: 100%;
+        }
+        &::before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          content: "";
+          width: 10px;
+          height: 10px;
+          border-top: 2px solid #02a6b5;
+          border-left: 2px solid #02a6b5;
+          z-index: 1;
+        }
+        &::after {
+          position: absolute;
+          top: 0;
+          right: 0;
+          content: "";
+          width: 10px;
+          height: 10px;
+          border-top: 2px solid #02a6b5;
+          border-right: 2px solid #02a6b5;
+          z-index: 1;
+        }
+        .panel-footer {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          z-index: 9;
+          &::before {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-bottom: 2px solid #02a6b5;
+            border-left: 2px solid #02a6b5;
+          }
+          &::after {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-bottom: 2px solid #02a6b5;
+            border-right: 2px solid #02a6b5;
+          }
+        }
       }
 
-      #item-3 {
+      .item-3 {
         width: 7.1375rem;
         height: 3.3rem;
+        margin: 0 auto;
         margin-top: 10px;
         position: relative;
         background-image: url("../assets/5a.png");
         background-size: 100% 100%;
         background-repeat: no-repeat;
-
-        &::after {
-          content: "";
-          width: 7.1375rem;
-          height: 3.3rem;
-          background-image: url("../assets/7a.png");
-          background-size: 100% 100%;
-          background-repeat: no-repeat;
+        #item3-body {
+          width: 100%;
+          height: 100%;
+          &::after {
+            content: "";
+            width: 7.1375rem;
+            height: 3.3rem;
+            background-image: url("../assets/7a.png");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+          }
+        }
+        &::before {
           position: absolute;
-          bottom: 0;
+          top: 0;
           left: 0;
+          content: "";
+          width: 10px;
+          height: 10px;
+          border-top: 2px solid #02a6b5;
+          border-left: 2px solid #02a6b5;
           z-index: 1;
+        }
+        &::after {
+          position: absolute;
+          top: 0;
+          right: 0;
+          content: "";
+          width: 10px;
+          height: 10px;
+          border-top: 2px solid #02a6b5;
+          border-right: 2px solid #02a6b5;
+          z-index: 1;
+        }
+        .panel-footer {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          z-index: 9;
+          &::before {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-bottom: 2px solid #02a6b5;
+            border-left: 2px solid #02a6b5;
+          }
+          &::after {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-bottom: 2px solid #02a6b5;
+            border-right: 2px solid #02a6b5;
+          }
         }
       }
     }
