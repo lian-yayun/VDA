@@ -108,10 +108,10 @@ export default {
       color: #dcdcdc;
       font-style: italic;
       font-weight: 600;
-      text-shadow: 1px 1px #0075ff;
+      text-shadow: 0.0125rem 0125rem #0075ff;
       font-family: "PingFang Medium";
-      font-size: 28px;
-      line-height: 48px;
+      font-size: 0.35rem;
+      line-height: 0.6rem;
       position: relative;
 
       &::after {
@@ -151,7 +151,7 @@ export default {
 
       .weather {
         color: #e6f7ff;
-        font-size: 14px;
+        font-size: 0.175rem;
         width: 4rem;
         height: 0.9375rem;
         line-height: 0.9375rem;
@@ -160,15 +160,15 @@ export default {
         font-weight: 400;
 
         .icon-1 {
-          width: 40px;
-          height: 40px;
+          width: 0.5rem;
+          height: 0.5rem;
           filter: drop-shadow(0 0 #000);
         }
       }
 
       #showTimeitem {
         line-height: 0.9375rem;
-        font-size: 14px;
+        font-size: 0.175rem;
         color: #e6f7ff;
         font-weight: 400;
         width: 3.125rem;
@@ -179,6 +179,7 @@ export default {
 
   .main {
     width: calc(100% - 0.625rem);
+    height: 10.7rem;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -206,13 +207,13 @@ export default {
 
           .text-1 {
             font-family: "PingFang Medium";
-            font-size: 16px;
+            font-size: 0.2rem;
             height: 0.5rem;
             line-height: 0.5rem;
             color: #dcdcdc;
             width: 3rem;
             font-weight: 600;
-            text-shadow: 1px 1px #0075ff;
+            text-shadow: 0.0125rem 0.0125rem #0075ff;
           }
         }
 
@@ -223,7 +224,7 @@ export default {
           background-size: 100% 100%;
           background-repeat: no-repeat;
           font-family: electronicFont;
-          font-size: 52px;
+          font-size: 0.65rem;
           color: #ffffff;
           position: relative;
 
@@ -236,7 +237,7 @@ export default {
 
             .item-1 {
               font-family: electronicFont;
-              font-size: 16px;
+              font-size: 0.2rem;
             }
           }
         }
@@ -260,10 +261,10 @@ export default {
           top: 0;
           left: 0;
           content: "";
-          width: 10px;
-          height: 10px;
-          border-top: 2px solid #02a6b5;
-          border-left: 2px solid #02a6b5;
+          width: 0.125rem;
+          height: 0.125rem;
+          border-top: 0.025rem solid #02a6b5;
+          border-left: 0.025rem solid #02a6b5;
           z-index: 1;
         }
 
@@ -272,10 +273,10 @@ export default {
           top: 0;
           right: 0;
           content: "";
-          width: 10px;
-          height: 10px;
-          border-top: 2px solid #02a6b5;
-          border-right: 2px solid #02a6b5;
+          width: 0.125rem;
+          height: 0.125rem;
+          border-top: 0.025rem solid #02a6b5;
+          border-right: 0.025rem solid #02a6b5;
           z-index: 1;
         }
       }
@@ -283,7 +284,7 @@ export default {
 
     .body-2 {
       width: 8rem;
-      height: calc(100vh - 0.9rem);
+      height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
@@ -300,10 +301,10 @@ export default {
           top: 0;
           left: 0;
           content: "";
-          width: 10px;
-          height: 10px;
-          border-top: 2px solid #02a6b5;
-          border-left: 2px solid #02a6b5;
+          width: 0.125rem;
+          height: 0.125rem;
+          border-top: 0.025rem solid #02a6b5;
+          border-left: 0.025rem solid #02a6b5;
           z-index: 1;
         }
         &::after {
@@ -311,10 +312,10 @@ export default {
           top: 0;
           right: 0;
           content: "";
-          width: 10px;
-          height: 10px;
-          border-top: 2px solid #02a6b5;
-          border-right: 2px solid #02a6b5;
+          width: 0.125rem;
+          height: 0.125rem;
+          border-top: 0.025rem solid #02a6b5;
+          border-right: 0.025rem solid #02a6b5;
           z-index: 1;
         }
         .panel-footer {
@@ -328,20 +329,20 @@ export default {
             bottom: 0;
             left: 0;
             content: "";
-            width: 10px;
-            height: 10px;
-            border-bottom: 2px solid #02a6b5;
-            border-left: 2px solid #02a6b5;
+            width: 0.125rem;
+            height: 0.125rem;
+            border-bottom: 0.025rem solid #02a6b5;
+            border-left: 0.025rem solid #02a6b5;
           }
           &::after {
             position: absolute;
             bottom: 0;
             right: 0;
             content: "";
-            width: 10px;
-            height: 10px;
-            border-bottom: 2px solid #02a6b5;
-            border-right: 2px solid #02a6b5;
+            width: 0.125rem;
+            height: 0.125rem;
+            border-bottom: 0.025rem solid #02a6b5;
+            border-right: 0.025rem solid #02a6b5;
           }
         }
       }
@@ -350,7 +351,7 @@ export default {
         width: 7.1375rem;
         height: 3.3rem;
         margin: 0 auto;
-        margin-top: 10px;
+        margin-top: 0.125rem;
         position: relative;
         background-image: url("../assets/5a.png");
         background-size: 100% 100%;
@@ -376,10 +377,10 @@ export default {
           top: 0;
           left: 0;
           content: "";
-          width: 10px;
-          height: 10px;
-          border-top: 2px solid #02a6b5;
-          border-left: 2px solid #02a6b5;
+          width: 0.125rem;
+          height: 0.125rem;
+          border-top: 0.025rem solid #02a6b5;
+          border-left: 0.025rem solid #02a6b5;
           z-index: 1;
         }
         &::after {
@@ -387,10 +388,10 @@ export default {
           top: 0;
           right: 0;
           content: "";
-          width: 10px;
-          height: 10px;
-          border-top: 2px solid #02a6b5;
-          border-right: 2px solid #02a6b5;
+          width: 0.125rem;
+          height: 0.125rem;
+          border-top: 0.025rem solid #02a6b5;
+          border-right: 0.025rem solid #02a6b5;
           z-index: 1;
         }
         .panel-footer {
@@ -404,20 +405,20 @@ export default {
             bottom: 0;
             left: 0;
             content: "";
-            width: 10px;
-            height: 10px;
-            border-bottom: 2px solid #02a6b5;
-            border-left: 2px solid #02a6b5;
+            width: 0.125rem;
+            height: 0.125rem;
+            border-bottom: 0.025rem solid #02a6b5;
+            border-left: 0.025rem solid #02a6b5;
           }
           &::after {
             position: absolute;
             bottom: 0;
             right: 0;
             content: "";
-            width: 10px;
-            height: 10px;
-            border-bottom: 2px solid #02a6b5;
-            border-right: 2px solid #02a6b5;
+            width: 0.125rem;
+            height: 0.125rem;
+            border-bottom: 0.025rem solid #02a6b5;
+            border-right: 0.025rem solid #02a6b5;
           }
         }
       }
