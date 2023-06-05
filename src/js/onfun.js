@@ -3,6 +3,13 @@ import 'echarts-gl';
 import data from "../json/flights2.json";
 import china from "../json/china";
 var linesname = [];
+const transformFontSize = (fontsize) => {
+    // 获取屏幕宽度
+    const width = window.innerWidth
+    const ratio = width / 1920
+    // 取下整
+    return parseInt(fontsize * ratio)
+};
 (function () {
 
     var chartDom = document.getElementById('world');
@@ -82,8 +89,11 @@ var linesname = [];
             data: linesname,
             orient: 'vertical',
             textStyle: {
-                color: '#fff'
-            }
+                color: '#fff',
+                fontSize: transformFontSize(12)
+            },
+            itemWidth: transformFontSize(25),
+            itemHeight: transformFontSize(14),
         },
         globe: {
             // environment: require('../assets/starfield.jpg') ,
@@ -110,6 +120,20 @@ var linesname = [];
     };
     option && myChart.setOption(option);
     window.addEventListener("resize", function () {
+        myChart.setOption({
+            legend: {
+                selectedMode: 'single',
+                left: 'left',
+                data: linesname,
+                orient: 'vertical',
+                textStyle: {
+                    color: '#fff',
+                    fontSize: transformFontSize(12)
+                },
+                itemWidth: transformFontSize(25),
+                itemHeight: transformFontSize(14),
+            },
+        })
         myChart.resize();
     });
     window.addEventListener('keydown', function () {
@@ -149,7 +173,7 @@ var linesname = [];
             },
             axisLabel: {
                 color: '#E6F7FF',
-                fontSize: 16,
+                fontSize: transformFontSize(16),
             },
             data: [...linesname],
             // offset: 30,
@@ -164,7 +188,7 @@ var linesname = [];
                 backgroundStyle: {
                     color: 'rgba(230,247,255,0.65)',
                 },
-                barWidth: 4,
+                barWidth: transformFontSize(4),
                 markPoint: {
                     symbol: 'rect',
                 },
@@ -183,6 +207,45 @@ var linesname = [];
 
     option && myChart.setOption(option);
     window.addEventListener("resize", function () {
+        myChart.setOption({
+            yAxis: {
+                type: 'category',
+                axisTick: {
+                    show: false
+                },
+                axisLabel: {
+                    color: '#E6F7FF',
+                    fontSize: transformFontSize(16),
+                },
+                data: [...linesname],
+                // offset: 30,
+                boundaryGap: true,
+                inverse: true
+            },
+            series: [
+                {
+                    data: [120, 200, 150, 80, 70, 110, 130, 124, 90, 140],
+                    type: 'bar',
+                    showBackground: true,
+                    backgroundStyle: {
+                        color: 'rgba(230,247,255,0.65)',
+                    },
+                    barWidth: transformFontSize(4),
+                    markPoint: {
+                        symbol: 'rect',
+                    },
+                    itemStyle: {
+                        color: new echarts.graphic.LinearGradient(
+                            1, 0, 0, 0,   // 表示从上到下
+                            [
+                                { offset: 1, color: 'rgba(211,213,213,0)' },
+                                { offset: 0, color: '#1BF8C3' }
+                            ]),
+                    },
+                    realtimeSort: true
+                }
+            ]
+        })
         myChart.resize();
     });
 })();
@@ -200,6 +263,7 @@ var linesname = [];
                 textShadowColor: '#0075ff',
                 textShadowOffsetX: 1,
                 textShadowOffsetY: 1,
+                fontSize: transformFontSize(20)
             },
         },
 
@@ -214,6 +278,9 @@ var linesname = [];
                 { name: '巴西', max: 38000 },
                 { name: '加拿大', max: 25000 }
             ],
+            axisName: {
+                fontSize: transformFontSize(20)
+            },
             splitLine: {
                 show: false
             },
@@ -245,6 +312,44 @@ var linesname = [];
     };
     option && myChart.setOption(option);
     window.addEventListener("resize", function () {
+        myChart.setOption({
+            title: {
+                text: '世界航班排行',
+                left: '10%',
+                textStyle: {
+                    color: '#fff',
+                    textShadowBlur: 1,
+                    textShadowColor: '#0075ff',
+                    textShadowOffsetX: 1,
+                    textShadowOffsetY: 1,
+                    fontSize: transformFontSize(24)
+                },
+            },
+            radar: {
+                center: ['50%', '50%'],
+                nameGap: 5,
+                // shape: 'circle',
+                indicator: [
+                    { name: '日本', max: 6500 },
+                    { name: '中国', max: 16000 },
+                    { name: '美国', max: 30000 },
+                    { name: '巴西', max: 38000 },
+                    { name: '加拿大', max: 25000 }
+                ],
+                axisName: {
+                    fontSize: transformFontSize(24)
+                },
+                splitLine: {
+                    show: false
+                },
+                splitArea: {
+                    show: false
+                },
+                axisLine: {
+                    show: false
+                }
+            },
+        });
         myChart.resize();
     });
 })();
@@ -444,6 +549,7 @@ var linesname = [];
                 label: {
                     show: true,
                     color: "#FFFFFF",
+                    fontSize: transformFontSize(16)
                 },
                 emphasis: {
                     itemStyle: {
@@ -451,9 +557,8 @@ var linesname = [];
                     },
                     label: {
                         show: true,
-                        textStyle: {
-                            color: '#db656b',
-                        }
+                        color: '#db656b',
+                        fontSize: transformFontSize(16)
                     },
                 },
 
@@ -481,6 +586,7 @@ var linesname = [];
                 label: {
                     show: true,
                     color: "#FFFFFF",
+                    fontSize: transformFontSize(16)
                 },
                 itemStyle: {
                     color: '#BA99C0'
@@ -546,8 +652,94 @@ var linesname = [];
     option && myChart.setOption(option);
     var count = 0;
     let regions = setInterval(function () {
-        option.geo3D.regions[0].name = geo3ditem[count].name;
-        myChart.setOption(option);
+        myChart.setOption({
+            geo3D: {
+                map: "china",
+                regions: [{
+                    name: geo3ditem[count].name,
+                    itemStyle: {
+                        color: '#BA99C0',
+                        opacity: 1,
+                        // borderWidth: 3,
+                        // borderColor: '#1BF8C3'
+                    },
+                    label: {
+                        show: true,
+                        color: "#FFFFFF",
+                        fontSize: transformFontSize(16)
+                    },
+                    emphasis: {
+                        itemStyle: {
+                            color: '#BA99C0'
+                        },
+                        label: {
+                            show: true,
+                            color: '#db656b',
+                            fontSize: transformFontSize(16)
+                        },
+                    },
+
+                }],
+                roam: true,
+                boxDepth: 'auto',
+                itemStyle: {
+                    // color: "rgba(25,37,47,255)",
+                    // borderColor: 'rgb(105,135,160)',
+                    color: "#9871A0",
+                    borderColor: '#595383',
+                    borderWidth: 0.5,
+                    opacity: 0.8
+                },
+                // label: {
+                //     show: true,
+                //     fontSize: 16,
+                //     color: '#fff',
+                //     // formatter: function (params) {
+                //     //   // console.log(params)
+                //     //   return params.name
+                //     // }
+                // },
+                emphasis: {
+                    label: {
+                        show: true,
+                        color: "#FFFFFF",
+                        fontSize: transformFontSize(16)
+                    },
+                    itemStyle: {
+                        color: '#BA99C0'
+                    },
+                },
+                shading: 'realistic',
+                light: {
+                    //光照阴影
+                    main: {
+                        color: '#fff', //光照颜色
+                        intensity: 0.5, //光照强度
+                        shadowQuality: 'high', //阴影亮度
+                        shadow: true, //是否显示阴影
+                        alpha: 30,
+                        beta: 0,
+                    },
+                    ambient: {
+                        color: '#fff', //光照颜色
+                        intensity: 0.7,
+                    },
+                },
+                // regionHeight: 5,
+                // groundPlane: {
+                //     show: true,
+                //     color: 'rgb(42,52,52)'
+                // },
+
+                // postEffect: {
+                //     enable: true,
+                //     bloom: {
+                //         enable: true,
+                //         bloomIntensity: 0.1,
+                //     }
+                // },
+            },
+        });
         count++;
         if (count == geo3ditem.length) {
             count = 0;

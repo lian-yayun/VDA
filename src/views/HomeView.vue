@@ -98,7 +98,7 @@ export default {
 .rw {
   .title {
     width: 100%;
-    height: 0.9rem;
+    height: 72px;
     background: transparent;
 
     text-align: left;
@@ -108,10 +108,10 @@ export default {
       color: #dcdcdc;
       font-style: italic;
       font-weight: 600;
-      text-shadow: 0.0125rem 0125rem #0075ff;
+      text-shadow: 1px 1px #0075ff;
       font-family: "PingFang Medium";
-      font-size: 0.35rem;
-      line-height: 0.6rem;
+      font-size: 28px;
+      line-height: 48px;
       position: relative;
 
       &::after {
@@ -145,41 +145,41 @@ export default {
     .showTime {
       position: absolute;
       top: 0;
-      right: 0.375rem;
+      right: 30px;
       display: flex;
       align-items: center;
 
       .weather {
         color: #e6f7ff;
-        font-size: 0.175rem;
-        width: 4rem;
-        height: 0.9375rem;
-        line-height: 0.9375rem;
+        font-size: 14px;
+        width: 320px;
+        height: 75px;
+        line-height: 75px;
         display: flex;
         align-items: center;
         font-weight: 400;
 
         .icon-1 {
-          width: 0.5rem;
-          height: 0.5rem;
+          width: 40px;
+          height: 40px;
           filter: drop-shadow(0 0 #000);
         }
       }
 
       #showTimeitem {
-        line-height: 0.9375rem;
-        font-size: 0.175rem;
+        line-height: 75px;
+        font-size: 14px;
         color: #e6f7ff;
         font-weight: 400;
-        width: 3.125rem;
+        width: 250px;
         text-align: center;
       }
     }
   }
 
   .main {
-    width: calc(100% - 0.625rem);
-    height: 10.7rem;
+    width: calc(100% - 50px);
+    height: 800px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -190,8 +190,8 @@ export default {
 
       .fanpai {
         position: absolute;
-        width: 3rem;
-        height: 2.2rem;
+        width: 240px;
+        height: 176px;
         position: absolute;
         top: 13%;
         right: 0;
@@ -199,32 +199,35 @@ export default {
         transform: translate(50%, -50%);
 
         .text {
-          width: 3rem;
-          height: 0.5rem;
+          width: 240px;
+          height: 40px;
           display: flex;
           justify-content: center;
           align-items: center;
-
+          img {
+            width: 40px;
+            height: 40px;
+          }
           .text-1 {
             font-family: "PingFang Medium";
-            font-size: 0.2rem;
-            height: 0.5rem;
-            line-height: 0.5rem;
+            font-size: 16px;
+            height: 40px;
+            line-height: 40px;
             color: #dcdcdc;
-            width: 3rem;
+            width: 240px;
             font-weight: 600;
-            text-shadow: 0.0125rem 0.0125rem #0075ff;
+            text-shadow: 1px 1px #0075ff;
           }
         }
 
         .count {
-          width: 3rem;
-          height: 2rem;
+          width: 240px;
+          height: 160px;
           background-image: url("../assets/8a.png");
           background-size: 100% 100%;
           background-repeat: no-repeat;
           font-family: electronicFont;
-          font-size: 0.65rem;
+          font-size: 52px;
           color: #ffffff;
           position: relative;
 
@@ -232,28 +235,28 @@ export default {
             position: absolute;
             top: 0;
             left: 0;
-            width: 3.7rem;
+            width: 296px;
             transform: translateX(-9%);
 
             .item-1 {
               font-family: electronicFont;
-              font-size: 0.2rem;
+              font-size: 16px;
             }
           }
         }
       }
 
       #china {
-        width: 4rem;
-        height: 3.5rem;
+        width: 320px;
+        height: 280px;
         position: absolute;
-        bottom: 0.35rem;
+        bottom: 28px;
         left: 0;
         transform: translateX(0%);
       }
       #world {
         width: 100%;
-        height: 8.2rem;
+        height: 656px;
         position: relative;
 
         &::before {
@@ -261,10 +264,10 @@ export default {
           top: 0;
           left: 0;
           content: "";
-          width: 0.125rem;
-          height: 0.125rem;
-          border-top: 0.025rem solid #02a6b5;
-          border-left: 0.025rem solid #02a6b5;
+          width: 10px;
+          height: 10px;
+          border-top: 2px solid #02a6b5;
+          border-left: 2px solid #02a6b5;
           z-index: 1;
         }
 
@@ -273,24 +276,24 @@ export default {
           top: 0;
           right: 0;
           content: "";
-          width: 0.125rem;
-          height: 0.125rem;
-          border-top: 0.025rem solid #02a6b5;
-          border-right: 0.025rem solid #02a6b5;
+          width: 10px;
+          height: 10px;
+          border-top: 2px solid #02a6b5;
+          border-right: 2px solid #02a6b5;
           z-index: 1;
         }
       }
     }
 
     .body-2 {
-      width: 8rem;
+      width: 640px;
       height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
       .item-2 {
         width: 100%;
-        height: 3.7rem;
+        height: 296px;
         position: relative;
         #item2-body {
           width: 100%;
@@ -301,10 +304,10 @@ export default {
           top: 0;
           left: 0;
           content: "";
-          width: 0.125rem;
-          height: 0.125rem;
-          border-top: 0.025rem solid #02a6b5;
-          border-left: 0.025rem solid #02a6b5;
+          width: 10px;
+          height: 10px;
+          border-top: 2px solid #02a6b5;
+          border-left: 2px solid #02a6b5;
           z-index: 1;
         }
         &::after {
@@ -312,10 +315,10 @@ export default {
           top: 0;
           right: 0;
           content: "";
-          width: 0.125rem;
-          height: 0.125rem;
-          border-top: 0.025rem solid #02a6b5;
-          border-right: 0.025rem solid #02a6b5;
+          width: 10px;
+          height: 10px;
+          border-top: 2px solid #02a6b5;
+          border-right: 2px solid #02a6b5;
           z-index: 1;
         }
         .panel-footer {
@@ -329,29 +332,29 @@ export default {
             bottom: 0;
             left: 0;
             content: "";
-            width: 0.125rem;
-            height: 0.125rem;
-            border-bottom: 0.025rem solid #02a6b5;
-            border-left: 0.025rem solid #02a6b5;
+            width: 10px;
+            height: 10px;
+            border-bottom: 2px solid #02a6b5;
+            border-left: 2px solid #02a6b5;
           }
           &::after {
             position: absolute;
             bottom: 0;
             right: 0;
             content: "";
-            width: 0.125rem;
-            height: 0.125rem;
-            border-bottom: 0.025rem solid #02a6b5;
-            border-right: 0.025rem solid #02a6b5;
+            width: 10px;
+            height: 10px;
+            border-bottom: 2px solid #02a6b5;
+            border-right: 2px solid #02a6b5;
           }
         }
       }
 
       .item-3 {
-        width: 7.1375rem;
-        height: 3.3rem;
+        width: 571px;
+        height: 264px;
         margin: 0 auto;
-        margin-top: 0.125rem;
+        margin-top: 10px;
         position: relative;
         background-image: url("../assets/5a.png");
         background-size: 100% 100%;
@@ -361,8 +364,8 @@ export default {
           height: 100%;
           &::after {
             content: "";
-            width: 7.1375rem;
-            height: 3.3rem;
+            width: 571px;
+            height: 264px;
             background-image: url("../assets/7a.png");
             background-size: 100% 100%;
             background-repeat: no-repeat;
@@ -377,10 +380,10 @@ export default {
           top: 0;
           left: 0;
           content: "";
-          width: 0.125rem;
-          height: 0.125rem;
-          border-top: 0.025rem solid #02a6b5;
-          border-left: 0.025rem solid #02a6b5;
+          width: 10px;
+          height: 10px;
+          border-top: 2px solid #02a6b5;
+          border-left: 2px solid #02a6b5;
           z-index: 1;
         }
         &::after {
@@ -388,10 +391,10 @@ export default {
           top: 0;
           right: 0;
           content: "";
-          width: 0.125rem;
-          height: 0.125rem;
-          border-top: 0.025rem solid #02a6b5;
-          border-right: 0.025rem solid #02a6b5;
+          width: 10px;
+          height: 10px;
+          border-top: 2px solid #02a6b5;
+          border-right: 2px solid #02a6b5;
           z-index: 1;
         }
         .panel-footer {
@@ -405,20 +408,20 @@ export default {
             bottom: 0;
             left: 0;
             content: "";
-            width: 0.125rem;
-            height: 0.125rem;
-            border-bottom: 0.025rem solid #02a6b5;
-            border-left: 0.025rem solid #02a6b5;
+            width: 10px;
+            height: 10px;
+            border-bottom: 2px solid #02a6b5;
+            border-left: 2px solid #02a6b5;
           }
           &::after {
             position: absolute;
             bottom: 0;
             right: 0;
             content: "";
-            width: 0.125rem;
-            height: 0.125rem;
-            border-bottom: 0.025rem solid #02a6b5;
-            border-right: 0.025rem solid #02a6b5;
+            width: 10px;
+            height: 10px;
+            border-bottom: 2px solid #02a6b5;
+            border-right: 2px solid #02a6b5;
           }
         }
       }

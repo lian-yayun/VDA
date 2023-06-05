@@ -14,8 +14,9 @@
   width: 100%;
   background-image: url("./assets/4a_副本.jpg");
   background-size: 100% 100%;
-  min-height: 100vh;
   background-repeat: no-repeat;
+  height: 100%;
+  // height: 873px;
 }
 
 nav {
