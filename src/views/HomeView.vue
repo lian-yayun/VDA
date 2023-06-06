@@ -1,7 +1,7 @@
 <template>
   <div class="rw">
     <div class="title">
-      <span class="title-1">全球航班总量看板</span>
+      <div class="title-1">全球航班总量看板</div>
       <img class="img-1" src="../assets/10a.svg" alt="" />
       <img class="img-1" src="../assets/10-2a.svg" alt="" />
       <img class="img-2" src="../assets/11a.svg" alt="" />
@@ -112,6 +112,7 @@ export default {
       font-family: "PingFang Medium";
       font-size: 28px;
       line-height: 48px;
+      height: 48px;
       position: relative;
 
       &::after {
